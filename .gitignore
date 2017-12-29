@@ -1,0 +1,17 @@
+# Scala
+target
+.class
+.log
+
+# Project
+*.iml
+*.ipr
+*.iws
+.idea
+out
+
+# Other
+.DS_Store
+tags
+.*.swp
+.*.swo
