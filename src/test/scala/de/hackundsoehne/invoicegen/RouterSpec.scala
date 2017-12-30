@@ -1,5 +1,6 @@
 package de.hackundsoehne.invoicegen
 
+import de.hackundsoehne.invoicegen.server.Router
 import org.http4s.dsl._
 import org.http4s.{Method, Request, Response, Status}
 import org.specs2.matcher.MatchResult
@@ -16,7 +17,7 @@ class RouterSpec extends org.specs2.mutable.Specification {
 
   private[this] val retHelloWorld: Response = {
     val getHW = Request(Method.GET, uri("/hello/world"))
-    val task = Router.service.orNotFound(getHW)
+    val task = Router.invoice.orNotFound(getHW)
     task.unsafeRun()
   }
 
