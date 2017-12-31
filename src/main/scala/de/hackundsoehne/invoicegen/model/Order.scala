@@ -1,5 +1,7 @@
 package de.hackundsoehne.invoicegen.model
 
+import slick.lifted.MappedTo
+
 /** Specifies structure of an order as it is received from the client.
   *
   * @param amount Number of times the order was purchased
@@ -14,3 +16,4 @@ case class Order(amount: Int,
                  position: Int,
                  price: Int) {
 }
+

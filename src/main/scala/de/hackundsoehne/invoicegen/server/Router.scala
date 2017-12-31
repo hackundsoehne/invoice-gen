@@ -1,6 +1,6 @@
 package de.hackundsoehne.invoicegen.server
 
-import de.hackundsoehne.invoicegen.util.InvoiceParser
+import de.hackundsoehne.invoicegen.handlers.InvoiceParser
 import io.circe._
 import io.circe.syntax._
 import org.http4s._

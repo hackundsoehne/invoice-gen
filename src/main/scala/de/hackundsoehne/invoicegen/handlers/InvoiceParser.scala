@@ -1,4 +1,4 @@
-package de.hackundsoehne.invoicegen.util
+package de.hackundsoehne.invoicegen.handlers
 
 import java.util.Locale
 

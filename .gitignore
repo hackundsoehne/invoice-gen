@@ -3,6 +3,9 @@ target
 .class
 .log
 
+# Data
+*.db
+
 # Project
 *.iml
 *.ipr
