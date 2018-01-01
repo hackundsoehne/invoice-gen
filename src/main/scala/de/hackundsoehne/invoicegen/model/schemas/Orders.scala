@@ -6,14 +6,14 @@ import slick.jdbc.JdbcType
 import slick.jdbc.SQLiteProfile.api._
 
 class Orders(tag: Tag) extends Table[Order](tag, "ORDERS") {
-  implicit val stringListMapper: JdbcType[List[String]] with BaseTypedType[List[String]] = MappedColumnType.base[List[String], String](
+  private implicit val stringListMapper = MappedColumnType.base[List[String], String](
     list => list.map(str => str.replace("b", "b2"))
       .map(str => str.replace("a", "b1"))
       .mkString("a"),
     string => string.split("a").toList
+      .filter(str => str != "")
       .map(str => str.replace("b1", "a"))
       .map(str => str.replace("b2", "b"))
-      .filter(str => str != "")
   )
 
   def id = column[Int]("ID", O.PrimaryKey, O.AutoInc)
